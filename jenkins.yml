@@ -1,0 +1,38 @@
+---
+- hosts: jenkins
+  remote_user: ec2-user
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Download jenkins
+    get_url: 
+      url: https://pkg.jenkins.io/redhat/jenkins.repo 
+      dest: /etc/yum.repos.d/jenkins.repo 
+      force: yes
+  - name: Import jenkins key 
+    rpm_key:
+        state: present
+        key: https://pkg.jenkins.io/redhat/jenkins.io.key
+  -name: upgrade all packages
+    yum:
+      name: '*'
+      state: latest
+  - name: Install Apache - java - jenkins
+    yum: 
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - httpd
+      - java-1.8.0-openjdk-devel
+      - jenkins
+  - name: Make my directory tree readable
+    file:
+      path: /var/www/html/
+      mode: u=rwX,g=rX,o=rX
+      recurse: yes
+      owner: apache
+      group: apache
+  - name: Make sure Apache is started now and at boot.
+    service: name=httpd state=started enabled=yes
+  - name: Make sure jenkins is started now and at boot.
+    service: name=jenkins state=started enabled=yes
