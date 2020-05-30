@@ -1,6 +1,6 @@
 # Project Title
 
-CI/CD pipeline - AWS~Jenkins~GitHub
+CI/CD pipeline - AWS - Jenkins - GitHub
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ This project is set 3 steps:
     
 ### Prerequisites
 
-Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins required), Jenkins(CI), AWS account (Cloud Provider), Github account(Source Control Mgmt.), 1 pc or mac (simulation)
+Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins required), Jenkins(CI), AWS account (Cloud Provider), Github account(Source Control Mgmt.), ~ 1 pc or mac (simulation) ~
 
 ## Deployment & Operations
 
