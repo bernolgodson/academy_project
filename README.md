@@ -25,7 +25,16 @@ Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins requirement),
 
 - ansible uses aws_hosts file as inventory hosts file and apache.yml, jenkins.yml playbooks to set up different instances environments on AWS.
 
-- config file is used as agent forwading ssh on the employee machine to redirect ssh request through the jump host.
+- config file is used as agent forwading ssh on the employee machine to redirect ssh request through the jump host.\
+
+## important commands
+    #terraform init
+    #terraform fmt
+    #terraform validate 
+    #terraform plan -lock=false
+    #terraform apply -lock=false
+    #terraform destroy -target aws_instance.<instance name> 
+
 
 ## Built With
 
