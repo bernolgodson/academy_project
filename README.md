@@ -1,6 +1,7 @@
 # Project Title
 
 CI/CD pipeline - AWS - Jenkins - GitHub
+Purpose: automate the provisioning, configuring, and deploying of an HTML web application
 
 ## Getting Started
 
@@ -14,13 +15,13 @@ This project is set 3 steps:
     
 ### Prerequisites
 
-Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins required), Jenkins(CI), AWS account (Cloud Provider), Github account(Source Control Mgmt.), ~1 pc or mac (simulation)~
+Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins requirement), Jenkins(CI), AWS account (Cloud Provider), Github account(Source Control Mgmt.)
 
 ## Deployment & Operations
 
 - terraform uses main.tf to deploy all the resources needed to AWS. Resources such as: instances, security groups. We also called default data from AWS such as default VPC and eip. 
 
-- terraform to be apply successfully also needs for variables initialisation in main.tf and terraform.tfvars to provision values to these variables.
+- terraform to be apply successfully also needs variables.tf for variables initialisation in main.tf and terraform.tfvars to provision values to these variables.
 
 - ansible uses aws_hosts file as inventory hosts file and apache.yml, jenkins.yml playbooks to set up different instances environments on AWS.
 
