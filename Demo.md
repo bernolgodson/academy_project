@@ -9,7 +9,7 @@ Present the Google Slides content for 10 minutes.
 Go over the README.md file for 5 minutes.
 
     How to deploy the project
-    How Jenkins deploys code automatically via the dev branch and head commits
+    How Jenkins deploys code automatically via the dev and head commits
     
 Showcase your demo for 10 minutes.
 
