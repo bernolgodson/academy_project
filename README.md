@@ -1,6 +1,7 @@
 # Project Title
 
 CI/CD pipeline - AWS - Jenkins - GitHub
+
 Purpose: automate the provisioning, configuring, and deploying of an HTML web application
 
 ## Getting Started
