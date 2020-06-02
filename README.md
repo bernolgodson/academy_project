@@ -39,14 +39,14 @@ Terraform (Deployment), Ansible (Configuration), Java jdk (jenkins requirement),
 ## Jenkins configuration
 
     On Jenkins, go to Manage Plugins and make sure or add the two plugins "SSH plugin" and "GitHub plugin".
-    Go to Configure System and under SSH remote hosts, add in your SSH sites that your project will connect to.
+    Go to Configure System and under Publish over SSH , add in your SSH servers that your project will connect to.
     Go to credentials and set up credential username + ssh key path
     Add a new item and select the "pipeline".
-    Under Source Code Management, add the Git repository and specify your branch.
+    Under Source Code Management, add the Git repository.
     Under Build Triggers, select the GitHub hook trigger for GITScm polling.
-    Under Build, add a build step and select Execute shell script on remote host using ssh, then select your SSH site and 
-Save your job and go over to your GitHub repository and in settings add a webhook.
-Make changes to the code and commit the changes to notify Jenkins to automatically run a build.
+    Under Pipeline, specify the pipeline script to be read from SCM, also add the Git repository, specify your branch
+    save your job and go over to your GitHub repository and in settings add a webhook.
+    Make changes to the code and commit the changes to notify Jenkins to automatically run a build.
 
 
 ## Built With
