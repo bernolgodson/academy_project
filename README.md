@@ -6,7 +6,7 @@ Purpose: automate the provisioning, configuration, and deployment of an HTML web
 
 ## Getting Started
 
-This project is set 3 steps:
+This project has 3 steps:
 
 - Deployment: involving the deployment of resources (instances and security groups) on AWS using Terraform and the configuration of web servers machines and jenkins machine with Ansible
 
