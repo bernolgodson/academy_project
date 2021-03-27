@@ -8,3 +8,4 @@ variable "public_key_path" {}
 variable "all_instance_type" {}
 variable "all_ami" {}
 variable "jenkins" {}
+variable "AccessKey" {}
